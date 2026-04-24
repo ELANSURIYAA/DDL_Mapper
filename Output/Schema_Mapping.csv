@@ -1,0 +1,34 @@
+Source Column,Source Data Type,Target Column,Target Data Type,Mapping Notes
+CUSTOMER,char(3),CustomerId,uniqueidentifier,Partial mapping: type change (char(3) to uniqueidentifier)
+CLIENT_GROUP,char(1),CustomerTypeId,uniqueidentifier,Partial mapping: type change (char(1) to uniqueidentifier)
+CLIENT_GROUP_DESCRIPTION,char(45),, ,No direct mapping in target
+CUSTOMER_NAME,char(45),CustomerName,nvarchar(128),Partial mapping: type change (char(45) to nvarchar(128))
+CUSTOMER_NAME2,char(45),, ,No direct mapping in target
+CUSTOMER_ADDR,char(45),, ,No direct mapping in target
+CUSTOMER_ADDR2,char(45),, ,No direct mapping in target
+CUSTOMER_CITY,char(25),, ,No direct mapping in target
+CUSTOMER_STATE,char(2),, ,No direct mapping in target
+CUSTOMER_ZIP,char(9),, ,No direct mapping in target
+CHANGED,datetime,UpdatedDate,datetime2(7),Partial mapping: type change (datetime to datetime2(7))
+CHANGED_BY,char(12),UpdatedBy,uniqueidentifier,Partial mapping: type change (char(12) to uniqueidentifier)
+SSN,char(9),TIN,varchar(50),Partial mapping: likely TIN, type change (char(9) to varchar(50))
+FEDERAL_ID,char(9),TIN,varchar(50),Partial mapping: likely TIN, type change (char(9) to varchar(50))
+STATE_ID,char(20),TIN,varchar(50),Partial mapping: likely TIN, type change (char(20) to varchar(50))
+ACCOUNT_CAREOF,char(45),, ,No direct mapping in target
+ACCOUNT_ADDR1,char(45),, ,No direct mapping in target
+ACCOUNT_ADDR2,char(45),, ,No direct mapping in target
+ACCOUNT_ADDR3,char(45),, ,No direct mapping in target
+ACCOUNT_ADDR4,char(45),, ,No direct mapping in target
+CLIENT_CAREOF,char(45),, ,No direct mapping in target
+, ,OfficeCode,nvarchar(25),Unmapped in source
+, ,IsActive,bit,Unmapped in source
+, ,CreatedBy,uniqueidentifier,Unmapped in source
+, ,CreatedDate,datetime2(7),Unmapped in source
+, ,CustomerNumber,varchar(50),Unmapped in source
+, ,Description,varchar(255),Unmapped in source
+, ,TCCNumber,varchar(50),Unmapped in source
+, ,UseMailingAddressAsPrimary,bit,Unmapped in source
+, ,BusinessPartyId,uniqueidentifier,Unmapped in source
+, ,DeactivatedDate,datetime,Unmapped in source
+, ,DeactivatedBy,uniqueidentifier,Unmapped in source
+, ,IsZenithCustomer,bit,Unmapped in source
