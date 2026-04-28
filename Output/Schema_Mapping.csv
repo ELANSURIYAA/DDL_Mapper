@@ -1,25 +1,26 @@
 Source Column,Source Data Type,Target Column,Target Data Type,Mapping Notes
-CUSTOMER,char(3),CustomerId,uniqueidentifier,Partial mapping: type change (char(3) to uniqueidentifier)
-CLIENT_GROUP,char(1),CustomerTypeId,uniqueidentifier,Partial mapping: type change (char(1) to uniqueidentifier)
+CUSTOMER,char(3),CustomerId,uniqueidentifier,Primary key mapping (type change: char(3) to uniqueidentifier)
+CLIENT_GROUP,char(1),, ,No direct mapping in target
 CLIENT_GROUP_DESCRIPTION,char(45),, ,No direct mapping in target
-CUSTOMER_NAME,char(45),CustomerName,nvarchar(128),Partial mapping: type change (char(45) to nvarchar(128))
+CUSTOMER_NAME,char(45),CustomerName,nvarchar(128),Possible mapping (type/length change: char(45) to nvarchar(128))
 CUSTOMER_NAME2,char(45),, ,No direct mapping in target
 CUSTOMER_ADDR,char(45),, ,No direct mapping in target
 CUSTOMER_ADDR2,char(45),, ,No direct mapping in target
 CUSTOMER_CITY,char(25),, ,No direct mapping in target
 CUSTOMER_STATE,char(2),, ,No direct mapping in target
 CUSTOMER_ZIP,char(9),, ,No direct mapping in target
-CHANGED,datetime,UpdatedDate,datetime2(7),Partial mapping: type change (datetime to datetime2(7))
-CHANGED_BY,char(12),UpdatedBy,uniqueidentifier,Partial mapping: type change (char(12) to uniqueidentifier)
-SSN,char(9),TIN,varchar(50),Partial mapping: likely TIN, type change (char(9) to varchar(50))
-FEDERAL_ID,char(9),TIN,varchar(50),Partial mapping: likely TIN, type change (char(9) to varchar(50))
-STATE_ID,char(20),TIN,varchar(50),Partial mapping: likely TIN, type change (char(20) to varchar(50))
+CHANGED,datetime,UpdatedDate,datetime2(7),Possible mapping (type change: datetime to datetime2(7))
+CHANGED_BY,char(12),UpdatedBy,uniqueidentifier,Possible mapping (type change: char(12) to uniqueidentifier)
+SSN,char(9),, ,No direct mapping in target (SSN exists in Entity table)
+FEDERAL_ID,char(9),TIN,varchar(50),Possible mapping (type/length change: char(9) to varchar(50))
+STATE_ID,char(20),, ,No direct mapping in target
 ACCOUNT_CAREOF,char(45),, ,No direct mapping in target
 ACCOUNT_ADDR1,char(45),, ,No direct mapping in target
 ACCOUNT_ADDR2,char(45),, ,No direct mapping in target
 ACCOUNT_ADDR3,char(45),, ,No direct mapping in target
 ACCOUNT_ADDR4,char(45),, ,No direct mapping in target
 CLIENT_CAREOF,char(45),, ,No direct mapping in target
+, ,CustomerTypeId,uniqueidentifier,Unmapped in source
 , ,OfficeCode,nvarchar(25),Unmapped in source
 , ,IsActive,bit,Unmapped in source
 , ,CreatedBy,uniqueidentifier,Unmapped in source
